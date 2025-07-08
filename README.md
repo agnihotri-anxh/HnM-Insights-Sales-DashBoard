@@ -18,7 +18,8 @@ To build a Power BI dashboard that helps:
 - Enable data-driven decisions through KPIs
 
 ## 📊 Dashboard Overview
-![Dashboard Overview][image](https://github.com/user-attachments/assets/5fe5cd13-36ce-4f21-946e-e2be6b53a544)
+![Dashboard Overview](https://github.com/user-attachments/assets/f0fe7f79-23a6-4d23-9449-1c5513942ee8)
+
 
 
 ## 🔍 Visualizations & Their Insights
