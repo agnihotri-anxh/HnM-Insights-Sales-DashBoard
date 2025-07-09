@@ -1,6 +1,6 @@
 # 🛍️ H&M Insights - Power BI Sales Dashboard
 
-[Screenshot 2025-07-09 105847](https://github.com/user-attachments/assets/2dac7bf1-040b-4185-91b8-18307602f20b)
+VIEW AT :https://app.powerbi.com/links/IDYsmDmJmj?ctid=e09c6192-2b83-4585-8c44-13d4e615579b&pbi_source=linkShare
 
 
 A powerful and interactive Power BI dashboard project built using the **H&M Personalized Fashion Recommendations dataset**. This dashboard provides visual business insights into H&M’s fashion retail strategy, covering key areas such as revenue performance, customer demographics, product trends, and channel analysis.
