@@ -1,6 +1,6 @@
 # 🛍️ H&M Insights - Power BI Sales Dashboard
 
-[H M Sales Insights_page-0002](https://github.com/user-attachments/assets/c8b2f82d-816e-4332-820f-a5c7afd84da4)
+![H M Sales Insights_page-0002](https://github.com/user-attachments/assets/c8b2f82d-816e-4332-820f-a5c7afd84da4)
 
 
 **VIEW LIVE DASHBOARD:**
