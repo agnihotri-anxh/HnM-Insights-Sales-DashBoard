@@ -1,96 +1,152 @@
-# 🧵 H&M Fashion Sales Insights Dashboard
+# 🛍️ H&M Insights - Power BI Sales Dashboard
 
-A Power BI dashboard project created using the H&M Personalized Fashion Recommendations Dataset from Hugging Face. This project provides a deep-dive analysis into customer behavior, product performance, and sales distribution to extract actionable insights for retail decision-making.
-
-## 📂 Dataset Overview
-The dataset is sourced from [HuggingFace - dinhlnd1610/HM-Personalized-Fashion-Recommendations](https://huggingface.co/datasets/dinhlnd1610/HM-Personalized-Fashion-Recommendations) and includes:
-
-- `articles.csv` → Information about clothing items (e.g., product name, product type)
-- `customers.csv` → Customer demographics (e.g., age, club status, postal code)
-- `transactions.csv` → Sales transactions (date, article_id, customer_id, price)
-
-## 🧠 Business Objective
-To build a Power BI dashboard that helps:
-- Understand who the customers are
-- Identify high-performing product categories
-- Track sales over time
-- Analyze online vs offline purchase behavior
-- Enable data-driven decisions through KPIs
-
-## 📊 Dashboard Overview
-![Dashboard Overview](https://github.com/user-attachments/assets/f0fe7f79-23a6-4d23-9449-1c5513942ee8)
+[![Hero Banner]!(https://github.com/user-attachments/assets/518bb813-0548-4c4c-8e2f-a7deba323832)
 
 
+A powerful and interactive Power BI dashboard project built using the **H&M Personalized Fashion Recommendations dataset**. This dashboard provides visual business insights into H&M’s fashion retail strategy, covering key areas such as revenue performance, customer demographics, product trends, and channel analysis.
 
-## 🔍 Visualizations & Their Insights
+---
 
-### 📌 1. Key Performance Indicators (KPIs)
-| KPI | Description |
-|-----|-------------|
-| Customers | Total unique customers |
-| Revenue | Total revenue generated from transactions |
-| Orders | Total number of items sold |
+## ✨ Features & Dashboard Overview
 
-These metrics give a quick snapshot of overall business health.
+This Power BI dashboard offers a comprehensive view of H&M's sales data, including:
 
-![KPIs](screenshots/kpis.png)
+* 📈 **Key Performance Indicators (KPIs):** At-a-glance metrics for total Revenue, Orders, and Customers.
+* 👕 **Top Selling Product Types:** Identification of best-performing product categories.
+* 🛒 **Channel-wise Sales Split:** Analysis of sales distribution between Online and Store channels.
+* 🧑‍🤝‍🧑 **Customer Demographics:** Insights into customer age distribution.
+* 📦 **Product Category Performance:** Understanding the popularity of different product categories (e.g., sales by gender category).
+* 📆 **Sales Trends Over Time:** Visualization of sales performance over the latest six months.
 
-### 🛍️ 2. Online vs Store Sales Split
-- **Type**: Clustered Column Chart
-- **Data Used**: `transactions[sales_channel_id]`
-- **Insight**: Shows the dominance of online vs physical store sales
+---
 
-![Sales Channel Split](screenshots/sales_split.png)
+## 🚀 Technologies Used
 
-### � 3. Sales by Gender Category (Donut Chart)
-- **Data Used**: Merged articles and transactions with gender-related product categories
-- **Insight**: Helps identify which gender-targeted categories are performing well
+* **Power BI Desktop:** For data modeling, transformations, DAX calculations, and visualization.
+* **DAX (Data Analysis Expressions):** For creating custom measures and calculated columns.
+* **H&M Personalized Fashion Recommendations Dataset:** The primary data source.
 
-![Gender Category Sales](screenshots/gender_sales.png)
+---
 
-### 👥 4. Customer Age Band Distribution (Bar Chart)
-- **Age buckets**: <20, 20-29, 30-39, 40-49, 50+
-- **Derived from**: `customers[age]` column
-- **Insight**: Shows which age group is the largest audience
+## 🗂️ Dataset
 
-![Age Band Distribution](screenshots/age_band.png)
+The dataset used for this project is the **H&M Personalized Fashion Recommendations** dataset, available from:
 
-### 📈 5. Total Sales Over Time (Line Chart)
-- **Based on**: `transactions[t_dat]`
-- **Aggregated**: Monthly
-- **Insight**: Tracks sales performance trends across months
+* **Source:** [Hugging Face – H&M Personalized Fashion Recommendations](https://huggingface.co/datasets/dinhlnd1610/HM-Personalized-Fashion-Recommendations)
 
-![Sales Over Time](screenshots/sales_trend.png)
+### Included Tables:
 
-### 🧵 6. Top Selling Product Types (Bar Chart)
-- **Top 10 products** by `SUM(price)`
-- **Data from**: `articles[product_type_name]` joined with transactions
-- **Insight**: Highlights best-selling product categories like Dresses, Trousers, Skirts, etc.
+* `customers`: Contains customer demographics and behavioral data.
+* `articles`: Provides metadata for various products (articles).
+* `transactions`: Records all sales transactions, filtered for the **latest 6 months** for this analysis.
 
-![Top Products](screenshots/top_products.png)
+---
 
-## 🛠️ Tools Used
-| Tool | Purpose |
-|------|---------|
-| Power BI | Data modeling and visualization |
-| Python | Data preprocessing using pandas and datasets libraries |
-| DAX | KPIs and custom metrics |
-| Hugging Face | Dataset source |
+## 📌 Data Modeling & Transformations
 
-## ⚙️ DAX Measures Used
+Effective data modeling and preprocessing were crucial for creating an insightful dashboard.
+
+### 🔗 Relationships
+
+The following relationships were established to link the tables:
+
+* `transactions[customer_id]` **(Many)** → **(One)** `customers[customer_id]`
+* `transactions[article_id]` **(Many)** → **(One)** `articles[article_id]`
+
+### 🧹 Preprocessing & Derived Columns
+
+Key data preprocessing steps included:
+
+* **Date Filtering:** `transactions` data was filtered to include only the **latest 6 months** of sales records to ensure relevance.
+* **Derived Column - `Age Band`:** Customers were categorized into age groups for demographic analysis (e.g., `<20`, `20–29`, `30–39`, `40–49`, `50+`).
+* **Derived Column - `Postal Prefix`:** The first three digits of the postal code were extracted for potential geographical insights.
+* **Data Cleaning:** Columns with high missing values (e.g., `FN`, `Active`) were cleaned or excluded.
+* **Performance Optimization:** Only essential columns were retained to optimize dashboard performance.
+
+---
+
+## 📊 Visualizations Breakdown
+
+Here's a detailed look at the key visualizations within the dashboard:
+
+### 1. 🧮 KPI Cards
+
+(https://github.com/user-attachments/assets/bab61dc7-b90e-43bc-8102-4a8931b9a181)(https://github.com/user-attachments/assets/e8f6ad53-849d-4b33-badf-13984fc58f4d)
+
+
+
+* **Purpose:** Provide immediate high-level overview of critical business metrics.
+* **Metrics Displayed:**
+    * **Customers:** Total unique customers served.
+    * **Revenue:** Total revenue generated from sales.
+    * **Orders:** Total number of transactions recorded.
+
+### 2. 🛍️ Online vs Store Sales Split
+
+(https://github.com/user-attachments/assets/685ab22b-a0d6-4eac-ba87-76ee2b3493f3)
+
+
+* **Visual Type:** Clustered Bar Chart
+* **Fields:** `sales_channel_id` (representing Online/Store), `Total Revenue`
+* **Purpose:** Analyze the distribution of sales revenue across different sales channels.
+
+### 3. 🎯 Sales by Product Category (Gender-Specific)
+
+![Gender Pie Chart](images/gender_category.png)
+
+* **Visual Type:** Donut Chart
+* **Axis:** `product_type_name`
+* **Purpose:** Understand the popularity and revenue contribution of different product categories.
+
+### 4. 👨‍👩‍👧‍👦 Customer Age Band Distribution
+
+![Age Distribution](images/age_distribution.png)
+
+* **Visual Type:** Bar Chart
+* **Grouped By:** Derived `Age Band` column
+* **Purpose:** Visualize the demographic spread of customers by age group.
+
+### 5. ⏳ Total Sales Over Time
+
+![Sales Over Time](images/sales_trend.png)
+
+* **Visual Type:** Line Chart
+* **Axis:** `transaction_date` (aggregated by month)
+* **Value:** `SUM(price)`
+* **Purpose:** Track sales performance and identify trends or seasonality over the selected period.
+* **Note**: For more advanced time-intelligence (e.g., YTD, MTD), a dedicated date table would be beneficial in future iterations.
+
+### 6. 🥇 Top Selling Product Types
+
+![Top Selling Products](images/top_products.png)
+
+* **Visual Type:** Stacked Column Chart
+* **Axis:** `product_type_name`
+* **Value:** `Total Revenue`
+* **Features:** Sorted in descending order by `Total Revenue` and word wrap enabled for longer product names for better readability.
+* **Purpose:** Highlight the product types generating the most revenue.
+
+---
+
+## 🧠 DAX Measures & Calculated Columns Used
+
+The following DAX (Data Analysis Expressions) formulas were used to create key metrics and derived attributes:
+
 ```dax
+-- Measures
 Total Revenue = SUM(transactions[price])
+Units Sold = COUNT(transactions[article_id])
 
-Orders = COUNT(transactions[article_id])
+-- Calculated Columns (in Customers table)
+Age Band = 
+    SWITCH(
+        TRUE(),
+        customers[age] < 20, "<20",
+        customers[age] < 30, "20–29",
+        customers[age] < 40, "30–39",
+        customers[age] < 50, "40–49",
+        "50+"
+    )
 
-Customers = DISTINCTCOUNT(transactions[customer_id])
-
-Age Band = SWITCH(TRUE(),
-    customers[age] < 20, "<20",
-    customers[age] < 30, "20-29",
-    customers[age] < 40, "30-39",
-    customers[age] < 50, "40-49",
-    "50+"
-)
-
+-- Calculated Columns (in Customers table)
 Postal Prefix = LEFT(customers[postal_code], 3)
