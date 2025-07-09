@@ -1,6 +1,6 @@
 # 🛍️ H&M Insights - Power BI Sales Dashboard
 
-(https://github.com/user-attachments/assets/1a01b202-7984-4415-8ec4-47a01d9440a8)
+[Screenshot 2025-07-09 105847](https://github.com/user-attachments/assets/2dac7bf1-040b-4185-91b8-18307602f20b)
 
 
 A powerful and interactive Power BI dashboard project built using the **H&M Personalized Fashion Recommendations dataset**. This dashboard provides visual business insights into H&M’s fashion retail strategy, covering key areas such as revenue performance, customer demographics, product trends, and channel analysis.
@@ -67,61 +67,14 @@ Key data preprocessing steps included:
 
 ## 📊 Visualizations Breakdown
 
-Here's a detailed look at the key visualizations within the dashboard:
+The dashboard, as shown in the hero banner, integrates several key visualizations to provide a comprehensive sales overview:
 
-### 1. 🧮 KPI Cards
-
-![KPIs Screenshot](images/kpi_cards.png)
-
-* **Purpose:** Provide immediate high-level overview of critical business metrics.
-* **Metrics Displayed:**
-    * **Customers:** Total unique customers served.
-    * **Revenue:** Total revenue generated from sales.
-    * **Orders:** Total number of transactions recorded.
-
-### 2. 🛍️ Online vs Store Sales Split
-
-![Channel Split](images/channel_split.png)
-
-* **Visual Type:** Clustered Bar Chart
-* **Fields:** `sales_channel_id` (representing Online/Store), `Total Revenue`
-* **Purpose:** Analyze the distribution of sales revenue across different sales channels.
-
-### 3. 🎯 Sales by Product Category (Gender-Specific)
-
-![Gender Pie Chart](images/gender_category.png)
-
-* **Visual Type:** Donut Chart
-* **Axis:** `product_type_name`
-* **Purpose:** Understand the popularity and revenue contribution of different product categories.
-
-### 4. 👨‍👩‍👧‍👦 Customer Age Band Distribution
-
-![Age Distribution](images/age_distribution.png)
-
-* **Visual Type:** Bar Chart
-* **Grouped By:** Derived `Age Band` column
-* **Purpose:** Visualize the demographic spread of customers by age group.
-
-### 5. ⏳ Total Sales Over Time
-
-![Sales Over Time](images/sales_trend.png)
-
-* **Visual Type:** Line Chart
-* **Axis:** `transaction_date` (aggregated by month)
-* **Value:** `SUM(price)`
-* **Purpose:** Track sales performance and identify trends or seasonality over the selected period.
-* **Note**: For more advanced time-intelligence (e.g., YTD, MTD), a dedicated date table would be beneficial in future iterations.
-
-### 6. 🥇 Top Selling Product Types
-
-![Top Selling Products](images/top_products.png)
-
-* **Visual Type:** Stacked Column Chart
-* **Axis:** `product_type_name`
-* **Value:** `Total Revenue`
-* **Features:** Sorted in descending order by `Total Revenue` and word wrap enabled for longer product names for better readability.
-* **Purpose:** Highlight the product types generating the most revenue.
+* **KPI Cards:** Prominently display "Customers," "Revenue," and "Orders" for quick performance tracking.
+* **Online vs Store Sales Split:** A clustered bar chart (or similar) illustrating sales distribution between `sales_channel_id` (Online/Store) and `Total Revenue`.
+* **Sales by Product Category (Gender-Specific):** A donut chart (or similar) showing `Total Revenue` by `product_type_name` to understand category popularity.
+* **Customer Age Band Distribution:** A bar chart visualizing the demographic spread of customers, grouped by the derived `Age Band`.
+* **Total Sales Over Time:** A line chart plotting `SUM(price)` against `transaction_date` (aggregated by month) to reveal sales trends.
+* **Top Selling Product Types:** A stacked column chart (or similar) highlighting the `product_type_name` values with the highest `Total Revenue`, sorted in descending order.
 
 ---
 
