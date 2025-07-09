@@ -1,6 +1,6 @@
 # 🛍️ H&M Insights - Power BI Sales Dashboard
 
-[![Hero Banner]!(https://github.com/user-attachments/assets/518bb813-0548-4c4c-8e2f-a7deba323832)
+[![Hero Banner](images/banner.png)](https://github.com/user-attachments/assets/1a01b202-7984-4415-8ec4-47a01d9440a8)
 
 
 A powerful and interactive Power BI dashboard project built using the **H&M Personalized Fashion Recommendations dataset**. This dashboard provides visual business insights into H&M’s fashion retail strategy, covering key areas such as revenue performance, customer demographics, product trends, and channel analysis.
@@ -71,9 +71,7 @@ Here's a detailed look at the key visualizations within the dashboard:
 
 ### 1. 🧮 KPI Cards
 
-(https://github.com/user-attachments/assets/bab61dc7-b90e-43bc-8102-4a8931b9a181)(https://github.com/user-attachments/assets/e8f6ad53-849d-4b33-badf-13984fc58f4d)
-
-
+![KPIs Screenshot](images/kpi_cards.png)
 
 * **Purpose:** Provide immediate high-level overview of critical business metrics.
 * **Metrics Displayed:**
@@ -83,8 +81,7 @@ Here's a detailed look at the key visualizations within the dashboard:
 
 ### 2. 🛍️ Online vs Store Sales Split
 
-(https://github.com/user-attachments/assets/685ab22b-a0d6-4eac-ba87-76ee2b3493f3)
-
+![Channel Split](images/channel_split.png)
 
 * **Visual Type:** Clustered Bar Chart
 * **Fields:** `sales_channel_id` (representing Online/Store), `Total Revenue`
